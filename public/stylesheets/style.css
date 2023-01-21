@@ -1,0 +1,171 @@
+:root {
+    --black-color: #000000;
+    --white-color: #ffffff;
+}
+
+body {
+   background: var(--black-color);
+}
+/*
+#nav-container{
+    position:relative;
+    width: fit-content;
+}
+*/
+/*-----------------------HOME-----------------------------*/
+
+#welcome-text{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    color: var(--white-color);
+    font-weight: 600;
+    text-align: right;
+    width: 90%;
+    position: absolute;
+    /*-animation-*/
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#welcome-text.fade{
+    opacity: 0;
+}
+
+#logo-wraper{
+    position: relative;
+}
+
+#connect-logo{
+    margin: auto;
+    margin-top: 10em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /*-animation-*/
+    opacity: 1;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+#connect-logo.fade{
+    opacity: 0;
+}
+
+.indicator{
+    position: absolute;
+    display: block;
+    margin-top: 9.5em;
+    margin-right: 0em;
+
+}
+
+#connect-logo p{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--white-color);
+    margin-top: 17em;
+    position: absolute;
+    text-decoration: none;
+}
+
+/*-----------------------CONNECTING-----------------------------*/
+
+#connecting-text{
+    position: relative;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 32px;
+    color: var(--white-color);
+    font-weight: 600;
+    text-align: center;
+    margin-top: 2em;
+    /*-animation-*/
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#connecting-text.fade{
+    opacity: 1;
+}
+
+#loading-logo{
+    margin: auto;
+    margin-top: -2em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#loading-logo.fade{
+    opacity: 1;
+}
+
+#loading-logo img{
+        /*-animation-*/
+        opacity: 1;
+        -webkit-transition: opacity 0.3s ease-in-out;
+        -moz-transition: opacity 0.3s ease-in-out;
+        -ms-transition: opacity 0.3s ease-in-out;
+        -o-transition: opacity 0.3s ease-in-out;
+        transition: opacity 0.3s ease-in-out;
+}
+
+@keyframes rotate360 {
+    to { transform: rotate(-360deg); }
+  }
+#loading-logo img{ animation: 4s rotate360 infinite linear; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+    <link rel="stylesheet" href="../../stylesheets/library.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header">
+        <div id="title">
+            {{playlist.name}}
+        </div>
+       {{#if tracks}}
+        <div id="songs">
+            <table id="table-songs">
+                {{#each tracks}}
+                <tr>
+                    <td><div class="div-index"><p class="index"></p></div></td>
+                    <td><div class="div-song"><p class="song">{{track}}</p></div></td>
+                    <td><div class="div-author"><p class="author">{{artist}}</br> {{bpm}} bpm</p></div></td>     
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+        {{~^~}}
+        <div style="color: white;">No tracks found</div>
+        {{/if}}
+       
+    </div>
+
+    <div style="margin-top: 5em"></div>
+    <div id="menu">
+        <div id="menu-content" class="">
+            <a href="/library">library</a>
+        </br>
+            <a href="/trackHistory">track history</a>
+        </br>
+            <a href="/upload">upload</a>
+        </div>
+        
+    </div>
+
+    <div style="position: fixed; text-align: center; width: 100%; bottom: 1%;">
+        <img id="menu-button" src="/images/menu-button.svg" >
+    </div>
+    
+    <script src="/js/utilsLibrary.js"></script>
+    <script src="/js/menu.js"></script>
+
+</body>
+</html>

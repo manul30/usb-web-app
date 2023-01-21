@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USB-DJ</title>
+    <link rel="stylesheet" href="stylesheets/track.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="header">
+        <div id="title">
+            <p class="track">printworks london</p>
+            <p class="date">03-11-2022</p>
+            <p class="numberMinutes"> 2 tracks</br>111 minutes</p>
+        </div>
+
+        <div id="sign">
+            <img src="/images/decorator.svg">
+        </div>
+
+        <div class="lane"></div>
+        <p class="text-track">track history</p>
+       
+    {{#if tracks}}
+        <div id="songs">
+            <table id="table-songs">
+                {{#each tracks}}
+                <tr>
+                    <td><div class="div-index"><p class="index"></p></div></td>
+                    <td><div class="div-song"><p class="song">{{track}}</p>
+                        <div id="extra">
+                            <table class="extra-info">
+                                <tr><td>Time</td><td class="data">{{time}}</td></tr>
+                                <tr><td>Key</td><td class="data">{{key}}</td></tr>
+                                <tr><td>Album</td><td class="data">{{album}}</td></tr>
+                                <tr><td>Genre</td><td class="data">{{genre}}</td></tr>
+                                <tr><td>Rating</td><td class="data">{{rating}}</td></tr>
+                                <tr><td>Date Added</td><td class="data">{{dateAdded}}</td></tr>
+                            </table>
+                        </div>
+                    </div></td>
+                    <td><div class="div-author"><p class="author">{{artist}}</br> {{bpm}} bpm</p></div></td>     
+                </tr>
+                {{/each}}
+            </table>
+        </div>
+    {{~^~}}
+       <div style="color: white;">No tracks found</div>
+    {{/if}}
+    
+    <div style="margin-top: 5em"></div>
+    <div id="menu">
+        <div id="menu-content" class="">
+            <a href="/library">library</a>
+        </br>
+            <a href="/trackHistory">track history</a>
+        </br>
+            <a href="/upload">upload</a>
+        </div>
+        
+    </div>
+
+    <div style="position: fixed; text-align: center; width: 100%; bottom: 1%;">
+        <img id="menu-button" src="/images/menu-button.svg" >
+    </div>
+
+    <script src="/js/utilsLibrary.js"></scriptsrc></script>
+    <script src="/js/track.js"></script>
+
+</body>
+</html>
